@@ -1,6 +1,6 @@
 <?php
 session_start();
-
+include 'config.php';
 if (!isset($_SESSION['log']) || $_SESSION['log'] !== '1') {
     header("location: login.php");
     exit();
@@ -48,10 +48,11 @@ nav a:last-child {
            <a href="">GET YOUR DREAM JOB</a>
         </div>
         <div class="right">
-        <a href="#">HOME</a>
-            <a href="#">CONTACT US</a>
+        <a href="home.php">HOME</a>
+            <a href="contact.php">CONTACT US</a>
             <a href="logout.php">LOGOUT</a>
-            <a href="#">ABOUT US</a>
+            <a href="application.php">APPLICATION STATUS</a>
+            <a href="about.php">ABOUT US</a>
         </div>
 </nav>
              <h1>Welcome <?php  echo " ". $_SESSION['firstname'] ."" ?></h1>
